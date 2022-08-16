@@ -540,7 +540,7 @@ export class Server extends EventEmitter {
 
             this.server.on('error', onError);
             this.server.on('listening', onListening);
-            this.server.listen(this.port);
+            this.server.listen(this.port, '127.0.0.1');
         });
 
         return nodeify(promise, callback);
